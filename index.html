@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEL TIGER FLAT PRODUCTS LTD</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FontAwesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Ionicons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/ionicons@5.5.4/dist/ionicons/ionicons.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="title-bar">
+            <div class="logo-container">
+                <img src="master.jpeg" alt="Master Brand Logo" class="logo">
+            </div>
+            <h1>SEL TIGER FLAT PRODUCTS LTD</h1>
+            <section class="stock-price-section">
+                <h2>Live Stock Price</h2>
+                <p>Stock Symbol: <strong>SHYAM METALICS</strong></p>
+                <p>Current Price: <span id="stock-price">Loading...</span></p>
+            </section>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <div class="content-wrapper">
+            <section class="about-us">
+                <h2>About Us</h2>
+                <p>As one of India's leading fully integrated steel producers, Shyam Metalics with its signature offering under brand umbrella of "S-E-L Tiger." is known for unmatched strength, precision and resilience. With an installed capacity of 13.50 MTPA and seven advanced plants, Shyam Metalics dominates the steel industry from ore to metal, controlling every step to ensure premium quality and cost efficiency.</p>
+                <p>At the heart of its operations are integrated manufacturing plants, efficient production systems and captive power plants, enabling quick adaptation to market shifts while maintaining consistent excellence. Just like a tiger, we move swiftly, strategically and with unbeatable power, setting new benchmarks in the steel industry.</p>
+                <p><b>Introducing Our New Flat Steel Range - Color Coated & Galvanized Sheets</b></p>
+                <i>
+                    <p><b>- Strategic Location Advantage - Efficiency Redefined</b></p>
+                    <p><b>- Unmatched Warranty - Confidence in Every Coil</b></p>
+                    <p><b>- Doubling Capacity - The Future is Now</b></p>
+                </i>
+            </section>
+
+            <div class="poster">
+                <img src="Poster.jpeg" alt="Master Brand Poster">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Main Brands Title -->
+    <section class="main-brands-title">
+        <h2>Our Main Products</h2>
+    </section>
+
+    <!-- Sub Brand Sections -->
+    <div class="container">
+        <div class="brand">
+            <a href="crcoils.HTML" class="link-container">
+                <div class="image-box">
+                    <img src="crca.png" alt="Sub Brand 4">
+                </div>
+                <h3 class="modern-link">Coils & Sheets</h3>
+            </a>
+        </div>
+        <div class="brand">
+            <a href="subbrand1.html" class="link-container">
+                <div class="image-box">
+                    <img src="Royale.png" alt="Sub Brand 1">
+                </div>
+                <h3 class="modern-link">Ultra Premium Color Coated Sheet</h3>
+            </a>
+        </div>
+        <div class="brand">
+            <a href="subbrand2.html" class="link-container">
+                <div class="image-box">
+                    <img src="Elite.png" alt="Sub Brand 2">
+                </div>
+                <h3 class="modern-link">Premium Color Coated Sheet</h3>
+            </a>
+        </div>
+        <div class="brand">
+            <a href="subbrand3.html" class="link-container">
+                <div class="image-box">
+                    <img src="Azure.png" alt="Sub Brand 3">
+                </div>
+                <h3 class="modern-link">Galvalume Coils</h3>
+            </a>
+        </div>
+        <div class="brand">
+            <a href="subbrand4.html" class="link-container">
+                <div class="image-box">
+                    <img src="Alfa.png" alt="Sub Brand 4">
+                </div>
+                <h3 class="modern-link">Galvalume Sheets</h3>
+            </a>
+        </div>
+    </div>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <a href="Flyer.pdf" download class="download-btn">
+            <i class="fas fa-download"></i> Download Our Flyer
+        </a>
+    </section>
+
+    <!-- Stock Price Section -->
+    
+
+    <script>
+        const apiKey = "58T5CIDBFFD2IKK9"; // Replace with your Alpha Vantage API key
+        const symbol = "SHYAMMETL.BSE"; // Stock symbol you want to track
+        const apiUrl = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=shyammetl.bse&apikey=58T5CIDBFFD2IKK9`;
+
+        async function fetchStockPrice() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (data["Global Quote"] && data["Global Quote"]["05. price"]) {
+                    const price = data["Global Quote"]["05. price"];
+                    document.getElementById("stock-price").textContent = `Rs.${parseFloat(price).toFixed(2)}`;
+                } else {
+                    document.getElementById("stock-price").textContent = "Data not available.";
+                }
+            } catch (error) {
+                console.error("Error fetching stock price:", error);
+                document.getElementById("stock-price").textContent = "Error loading data.";
+            }
+        }
+
+        fetchStockPrice(); // Fetch initially
+        setInterval(fetchStockPrice, 3600000); // Update every hour (3600000 ms)
+    </script>
+</body>
+</html>
+
+    
+
+    <link rel="stylesheet" href="brandpage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <div class="footer-area section-space--inner--top--120 dark-bg">
+        <div class="container1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-content-wrapper" style="margin-top:30px;">
+                        <div class="row">
+                            <!-- Column 1: Footer Intro (Logo & Address) -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="footer-intro-wrapper">
+                                    <div class="footer-logo">
+                                        <a href="#">
+                                            <img src="https://www.shyammetalics.com/wp-content/uploads/2021/07/shyamlogo-2.png" class="img-fluid" alt="tmt manufacturers in Kolkata" title="Shyam Metalics Logo">
+                                        </a>
+                                    </div>
+                                    <div class="footer-desc">
+                                        Shyam Metalics has a history intertwined with stories of efforts, achievements, business acumen, growth and committed employees.
+                                    </div>
+                                    <div class="footer-desc">
+                                        <strong>Corporate Office:</strong><br>
+                                        <a href="https://goo.gl/maps/EQJcaubHBat8euXT8" target="_blank">Trinity Tower, 7th Floor,<br>
+                                        83, Topsia Road,<br>
+                                        Kolkata – 700046, West Bengal</a><br>
+                                        Fax: <a href="tel:+913340111031">+91 33 4011 1031</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Column 2: Social Links -->
+                            <div class="col-lg-2 col-md-6">
+                                <div class="footer-widget">
+                                    <h4 class="footer-widget__title">SOCIAL LINKS</h4>
+                                    <div class="social-links">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/ShyamMetalicsOfficial" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                            <li><a href="https://twitter.com/ShyamMetalics" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="https://in.linkedin.com/company/shyamgroup" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                            <li><a href="https://www.instagram.com/shyammetalicsofficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.youtube.com/channel/UC_n2w-nxhqLg7HWWyRARPQg/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Column 3: Useful Links -->
+                            <div class="col-lg-2 col-md-6">
+                                <div class="footer-widget">
+                                    <h4 class="footer-widget__title">USEFUL LINKS</h4>
+                                    <ul class="footer-widget__navigation">
+                                        <li><a href="https://www.shyammetalics.com/blog/">Blog</a></li>
+                                        <li><a href="https://www.shyammetalics.com/careers/join-us/">Join Us – Shyam Metalics</a></li>
+                                        <li><a href="https://www.shyammetalics.com/careers/why-sel-life-at-sel/">Life at Shyam Metalics</a></li>
+                                        <li><a href="https://www.shyammetalics.com/media-downloads/press-coverage/">Events &amp; Press Coverage</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <!-- Column 4: Company -->
+                            <div class="col-lg-2 col-md-6">
+                                <div class="footer-widget">
+                                    <h4 class="footer-widget__title">COMPANY</h4>
+                                    <ul class="footer-widget__navigation">
+                                        <li><a href="https://www.shyammetalics.com/about-us/">About Us</a></li>
+                                        <li><a href="https://www.shyammetalics.com/productionfacilities/">Steel Production Facilities</a></li>
+                                        <li><a href="https://www.shyammetalics.com/about-us/message-from-md/">Message from MD – Shyam Metalics</a></li>
+                                        <li><a href="https://www.shyammetalics.com/wp-content/themes/shyam/assets/HR/Human-Rights-Policy.pdf" target="_blank" rel="noopener">Human Rights Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <!-- Column 5: Industries -->
+                            <div class="col-lg-2 col-md-6">
+                                <div class="footer-widget">
+                                    <h4 class="footer-widget__title">INDUSTRIES</h4>
+                                    <ul class="footer-widget__navigation">
+                                        <li><a href="https://www.shyammetalics.com/pellets/">Pellets</a></li>
+                                        <li><a href="https://www.shyammetalics.com/billets/">Billets</a></li>
+                                        <li><a href="https://www.shyammetalics.com/tmt-bar/">TMT Bars</a></li>
+                                        <li><a href="https://www.shyammetalics.com/power/">Power Plant</a></li>
+                                        <li><a href="https://www.shyammetalics.com/wire-rod/">Wire Rod</a></li>
+                                        <li><a href="https://www.shyammetalics.com/stainless-steel/">Stainless Steel</a></li>
+                                        <li><a href="https://www.shyammetalics.com/?page_id=1855">Aluminium Foil old</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copyright-wrapper">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-copyright-left">
+                                    © 2024 Shyam Metalics.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-copyright-right">
+                                    <ul class="footer-copyright-right__navigation">
+                                        <li><a href="https://www.shyammetalics.com/privacy-policy">Privacy</a></li>
+                                        <li><a href="https://www.shyammetalics.com/wp-content/uploads/2021/09/Terms-and-conditions-Digital-Contests.pdf">Disclaimers</a></li>
+                                        <li><a href="https://www.shyammetalics.com/sitemap_index.xml">Site Map</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+</html>

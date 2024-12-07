@@ -1,0 +1,691 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #f1730c;
+    display: flex;
+    flex-direction: column;
+    
+    /* justify-content: space-between;  Ensures content takes up space between header and footer */
+    /* text-align: center; */
+}
+
+/* Header */
+header {
+    background-color: #f1730c;
+    color: white;
+    padding: 2px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.master-logo img {
+    width: 100%;                /* Full width */
+    max-width: 300px;           /* Limit the max size */
+    height: auto;               /* Maintain aspect ratio */
+    object-fit: contain;        /* Prevent cutting off */
+    border-radius: 1%;         /* Make the logo round */
+    border: 3px solid #2c3e50;  /* Add a dark border */
+    padding: 10px;              /* Adds padding inside the border */
+    background-color: #fff;     /* White background behind logo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* Hover Effect for Master Logo */
+.master-logo img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
+}
+
+h1 {
+    font-size: 48px;  /* Larger font size */
+    color:#000000;  /* Darker, modern color */
+    font-family: 'Arial', sans-serif;  /* Clean sans-serif font */
+    font-weight: 700;  /* Bold font weight */
+    text-transform: uppercase;  /* Uppercase text */
+    letter-spacing: 2px;  /* Slight spacing between letters */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0);  /* Soft shadow for depth */
+    background-image: linear-gradient(to right, white, whi);  /* Gradient background */
+    -webkit-background-clip: text;  /* Clip the gradient to the text */
+    color: transparent;  /* Make the text transparent to show gradient */
+    padding: 10px;  /* Add some padding for spacing */
+}
+
+/* Sub-heading (About Us and Main Brands) */
+h2 {
+    font-size: 36px;  /* Large font size */
+    color: #f1960c;  /* Blue color for the subheading */
+    font-weight: 600;  /* Medium bold weight */
+    font-family: 'Helvetica', sans-serif;  /* Clean font family */
+    text-transform: uppercase;  /* Make text uppercase */
+    margin-bottom: 20px;  /* Space below the sub-heading */
+    letter-spacing: 1px;  /* Small letter spacing */
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+}
+
+/* Optional: Add some hover effect for extra flair */
+h1:hover, h2:hover {
+    color: #000000;  /* Change color on hover */
+    transform: scale(1.05);  /* Slight zoom effect */
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+
+/* Main Content Section (About Us, Poster) */
+.main-content {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Flex container to keep About Us and Poster side by side */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+}
+
+/* About Us Section */
+.about-us {
+    flex: 1;
+    max-width: 60%;
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+.about-us h2 {
+    font-size: 32px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+/* Poster Section */
+.poster {
+    flex: 0 0 35%;  /* Ensure the poster takes up 35% of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;  /* Ensure no overflow */
+}
+
+.poster img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;  /* Allow the image to scale down if necessary */
+    object-fit: contain;  /* Ensure the image scales properly inside the container */
+}
+
+
+/* Our Main Brands Title */
+.main-brands-title {
+    text-align: center;
+    margin-top: 30px;
+}ul {
+    list-style-type: disc;        /* Default bullet style (optional) */
+    padding-left: 20px;           /* Indentation from the left */
+    margin-top: 15px;             /* Space before the list */
+}
+
+/* List Items */
+ul li {
+    font-size: 16px;              /* Consistent font size for list items */
+    line-height: 1.6;             /* Line spacing for list items */
+    margin-bottom: 10px;          /* Space between list items */
+}
+
+/* Bold text within the list */
+ul li b {
+    color: #333;                  /* Ensure bold items are clear */
+}
+
+.main-brands-title h2 {
+    font-size: 36px;
+    color: #2C3E50;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f1730c;
+}
+
+/* Sub Brand Sections */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.brand {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image-box {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+.brand p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Footer Styles */
+/* footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1730c;
+    color: white;
+    margin-top: 40px;
+} */
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -------------------- MOBILE STYLES -------------------- */
+
+/* Mobile View */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .master-logo img {
+        max-width: 80%;
+    }
+
+    /* Stack About Us and Poster sections on mobile */
+    .content-wrapper {
+        flex-direction: column;  /* Stack vertically */
+        align-items: center;
+    }
+
+    .about-us, .poster {
+        max-width: 100%;
+    }
+
+    .poster {
+        margin-top: 20px;
+    }
+
+    /* Adjust the brand container layout */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .image-box {
+        height: 150px;
+    }
+
+    .main-brands-title h2 {
+        font-size: 28px;
+    }
+}
+/* Title Bar Styles */
+.title-bar {
+    display: flex;                      /* Using Flexbox for layout */
+    align-items: center;                /* Vertically align items in the center */
+    justify-content: flex-start;        /* Align items to the left */
+    background-color: #f1730c;          /* Dark background for the title bar */
+    padding: 5px 3px;                 /* Add padding for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+}
+
+.title-bar h1 {
+    font-size: 36px; 
+    align-items: center;                   /* Set the font size for the title */
+    color: #ecf0f1;                     /* Light text color for contrast */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    font-weight: 700;                   /* Bold font */
+    margin-left: 20px;                  /* Space between the logo and title */
+    text-transform: uppercase;          /* Uppercase for emphasis */
+    letter-spacing: 2px;                /* Add some spacing between letters for style */
+}
+
+
+.logo-container {
+    /* width: 100px; 
+                       Increased width for a larger logo */
+    margin-left: 10px;
+    height: 100px;                       /* Height equal to width for square shape */
+    border-radius: 1%;                  /* Slight rounding for better look */
+    background-color: #fff;              /* Add background to make the logo stand out */
+    padding: 5px;                        /* Add some padding for spacing */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+}
+
+.logo {
+    width: 100%;                         /* Make the logo fill the container */
+    height: 100%;                        /* Ensure logo is a perfect square */
+    object-fit: contain;                   /* Ensures the entire logo fits inside the square without cutting off */
+    border-radius: 10%;                   /* Round corners of the logo */
+    border: 1px solid #ecf0f1;            /* Add a noticeable white border */
+}
+
+/* Adding some responsiveness */
+@media (max-width: 768px) {
+    .title-bar {
+        flex-direction: column;         /* Stack the logo and title vertically on small screens */
+        text-align: center;              /* Center-align the title */
+    }
+
+    .title-bar h1 {
+        margin-left: 0;                 /* Remove the left margin when stacked */
+        margin-top: 10px;                /* Space between logo and title */
+    }
+
+    .logo-container {
+        /* width: 80px;                    Adjust logo size on small screens */
+        height: 80px;
+    }
+}
+
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+    .master-logo img {
+        max-width: 70%;
+    }
+
+    .about-us h2 {
+        font-size: 28px;
+    }
+
+    .brand p {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* General Footer Styling */
+
+.footer {
+    background-color: #282828; /* Dark background for contrast */
+    color: #fff;               /* White text for visibility */
+    padding: 30px 20px;      /*  Space around the text
+    /* text-align: center;        Centering content */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    border-top: 2px solid #FF7F00; /* Stylish top border */
+}
+
+
+/* Footer Text Styling */
+.footer-text {
+    margin: 10px 0;  /* Add spacing between each paragraph */
+    font-size: 14px;  /* Adjust font size for readability */
+}
+
+/* Footer Link Styling */
+.footer-link {
+    color: #FF7F00; /* Bright orange for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;     /* Make links stand out */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.footer-link:hover {
+    color: #fff;  /* Change to white when hovered */
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Contact Info Styling */
+.contact-info {
+    text-align: left; /* Align content to the left */
+    margin-top: 20px; /* Add some space above the contact section */
+    font-size: 14px;  /* Make the text consistent with other footer text */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Styling for strong tags within contact info */
+.contact-info strong {
+    color: #FF7F00; /* Highlight labels in orange */
+}
+
+/* General Footer Styling */
+.footer-area {
+    background-color: #212121;
+    color: #fff;
+    /* padding-top: 60px; */
+    padding-bottom: 40px;
+}
+
+.footer-content-wrapper {
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+/* Footer Columns Layout */
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 30px;
+}
+
+.footer-logo img {
+    max-width: 180px;
+    margin-bottom: 15px;
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.footer-desc strong {
+    color: #fff;
+}
+
+.footer-desc a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.footer-desc a:hover {
+    text-decoration: underline;
+}
+
+/* Social Links */
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-links a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #4CAF50;
+}
+
+/* Footer Widget Section */
+.footer-widget {
+    margin-bottom: 30px;
+}
+
+.footer-widget__title {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+/* Footer Navigation Links */
+.footer-widget__navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-widget__navigation li {
+    margin-bottom: 10px;
+}
+
+.footer-widget__navigation a {
+    font-size: 14px;
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.footer-widget__navigation a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-copyright-wrapper {
+    margin-top: 40px;
+    border-top: 1px solid #4CAF50;
+    padding-top: 20px;
+}
+
+.footer-copyright-left {
+    font-size: 14px;
+}
+
+.footer-copyright-right {
+    text-align: right;
+}
+
+.footer-copyright-right__navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-copyright-right__navigation li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-copyright-right__navigation a {
+    font-size: 14px;
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.footer-copyright-right__navigation a:hover {
+    color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-columns {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+
+    .footer-widget__title {
+        font-size: 15px;
+    }
+
+    .footer-widget__navigation a {
+        font-size: 12px;
+    }
+
+    .social-links a {
+        font-size: 18px;
+    }
+}
+.subbrand-image {
+    text-align: center; /* Centers the content inside the container */
+    margin-bottom: 20px; /* Adds space below the container */
+}
+
+.subbrand-image img {
+    display: block;  /* Makes the image a block element */
+    margin: 0 auto;  /* Horizontally centers the image */
+    max-width: 100%;  /* Ensures the image is responsive */
+    height: auto;  /* Maintains aspect ratio */
+}
+
+.subbrand-image h2 {
+    text-align: center;
+    margin-top: 10px;  /* Adds some space between the image and text */
+    font-size: 24px;  /* You can adjust the font size as needed */
+    color: #ff6600;  /* Sets the color of the text (you can change this) */
+    font-weight: bold;
+}
+/* Container for the link */
+.link-container {
+    display: inline-block;
+    text-decoration: none; /* Remove underline from the link */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation for scaling and shadow effect */
+}
+
+.link-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to give depth */
+}
+
+/* Style for the image box */
+.image-box {
+    width: 100%;
+    /* height: auto; */
+    overflow: hidden;
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.image-box img {
+    width: 100%;
+    /* height: auto; */
+    display: block;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Hover effect on the image */
+.link-container:hover .image-box img {
+    transform: scale(1.1); /* Zoom the image slightly on hover */
+}
+
+/* Style for the heading */
+.modern-link {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px; /* Adjusted size for balance */
+    font-weight: 600; /* Bold for emphasis */
+    color: #000000; /* Brand color */
+    text-decoration: none;
+    text-align: center; /* Center the text */
+    margin-top: 15px; /* Space between image and text */
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for text color and position */
+}
+
+/* Custom underline effect */
+.modern-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Thicker underline */
+    background-color: #f1730c; /* Consistent underline color */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects for the text */
+.link-container:hover .modern-link {
+    color: #f1730c; /* Change text color on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.link-container:hover .modern-link::after {
+    transform: scaleX(1); /* Underline appears on hover */
+    transform-origin: bottom left;
+}
+.download-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f1730c; /* Change to your desired color */
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #f1730c; /* Change hover color */
+    transform: translateY(-2px);
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+.stock-price-section {
+    text-align: right;
+    margin-left: auto; /* Optional margin for spacing */
+}
+
+/* Style for the stock price text */
+.stock-price-section p {
+    margin: 5px 0;
+}
+ 

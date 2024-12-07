@@ -1,0 +1,765 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+.container1{
+    padding: 5px;
+}
+/* Set the gallery to be a grid */
+.gallery-grid {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    gap: 10px; /* Space between images */
+    width: 100%; /* Make sure the grid fills its container */
+}
+
+/* Ensure each image fits into its box */
+.gallery-grid img {
+    width: 100%; /* Makes image fill its container */
+    height: 100%; /* Fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the box without distortion */
+}
+
+
+h1 {
+    font-size: 48px;  /* Larger font size */
+    color:#000000;  /* Darker, modern color */
+    font-family: 'Arial', sans-serif;  /* Clean sans-serif font */
+    font-weight: 700;  /* Bold font weight */
+    text-transform: uppercase;  /* Uppercase text */
+    letter-spacing: 2px;  /* Slight spacing between letters */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0);  /* Soft shadow for depth */
+    background-image: linear-gradient(to right, white, white);  /* Gradient background */
+    -webkit-background-clip: text;  /* Clip the gradient to the text */
+    color: transparent;  /* Make the text transparent to show gradient */
+    padding: 10px;  /* Add some padding for spacing */
+}
+
+/* Sub-heading (About Us and Main Brands) */
+h2{  margin-top: 10px;
+    /* background-color: #000000; */
+     font-size: 25px;  /*Large font size */
+    color: #f1730c;  /* Blue color for the subheading */
+    font-weight: 600;  /* Medium bold weight */
+    font-family: 'Helvetica', sans-serif;  /* Clean font family */
+    text-transform: uppercase;  /* Make text uppercase */
+    margin-bottom: 20px;  /* Space below the sub-heading */
+    letter-spacing: 1px;  /* Small letter spacing */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+}
+
+/* Optional: Add some hover effect for extra flair */
+h1:hover, h2:hover {
+    color: #000000;  /* Change color on hover */
+    transform: scale(1.05);  /* Slight zoom effect */
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     padding: 0 0px; 
+}
+
+header {
+    background-color: #f1730c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top:1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.subbrand-container {
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+.subbrand-image img {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.subbrand-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.about {
+    flex: 0 0 48%; /* 2-column layout */
+    text-align: left;
+    padding-right: 20px;
+    max-width: 600px;
+}
+
+.about h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 5px;
+    
+    color: #f1730c;
+    margin-bottom: 5px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.gallery {
+    align-self: center;
+    flex: 0 0 48%; /* 2-column layout */
+    text-align: left;
+    padding-left: 20px;
+}
+
+.gallery h3 {
+    font-size: 26px;
+    color: #f1730c;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: fill;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.navigation {
+    margin-top: 30px;
+}
+
+.back-button, .enquire-now-button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button {
+    background-color: #f1730c;
+    color: white;
+    border: 2px solid #f1730c;
+}
+
+.back-button:hover {
+    background-color: white;
+    color: #f1730c;
+}
+
+.enquire-now-button {
+    background-color: #e74c3c;
+    color: white;
+    border: 2px solid #e74c3c;
+}
+
+.enquire-now-button:hover {
+    background-color: white;
+    color: #e74c3c;
+}
+
+footer {
+    background-color: #f1730c;
+    color: white;
+    padding: 20px;
+    /* text-align: center; */
+    font-size: 14px;
+    /* position: relative; */
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .about-gallery-container {
+        flex-direction: column;
+    }
+
+    .about, .gallery {
+        flex: 0 0 100%; /* Stack items on smaller screens */
+        padding: 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1-column layout on smaller screens */
+    }
+    .gallery-grid img {
+        width: 100%;
+        height: 200px; /* Adjust height as needed */
+        object-fit: cover; /* Ensures images fill the container */
+        border-radius: 10px; /* Optional: Adds rounded corners */
+        transition: transform 0.3s ease; /* Smooth zoom effect */
+    }
+}
+
+.color-box {
+    width: 100%;  /* Ensure the box fills its grid cell */
+    height: 200px; /* Fixed height for all color boxes */
+}
+
+/* Ultra Premium Colors */
+.royal-gold {
+    background-color: #B7935C;
+}
+
+.deep-platinum {
+    background-color: #A5A9B8;
+}
+
+.diamond-white {
+    background-color: #F1F4F6;
+}
+
+.midnight-blue {
+    background-color: #191970;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    word-wrap: break-word; /* Allow text in cells to wrap to the next line */
+
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: #f1730c; /* Blue for header */
+    color: white;
+    font-weight: bold;
+    word-wrap: break-word; /* Ensure content wraps inside the cell */
+
+    text-transform: uppercase;
+}
+
+td {
+    word-wrap: break-word; /* Ensure content wraps inside the cell */
+
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+/* Zebra Striping for rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e0f7ff; /* Light Blue hover effect */
+}
+/* Container for the unique features section */
+.unique-features {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Grid Layout for Feature Cards */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* 3 cards per row, auto-adjusting */
+    gap: 20px;  /* Spacing between cards */
+    margin-top: 20px;
+}
+
+/* Styling for individual feature cards */
+.feature-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect for the feature cards */
+.feature-card:hover {
+    transform: translateY(-10px);   /* Slight upward movement */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Larger shadow on hover */
+    border-color: #ff7f00;           /* Slightly darker orange border color */
+}
+
+/* Flex container for icon and title inside each card */
+.head-dflex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Title inside each feature card */
+.info-hed {
+    align-items: center;
+    text-align: center;
+    color: #f1730c ;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Paragraph text styling inside cards */
+.text-justify {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+    table {
+        border: 0;
+    }
+    table thead {
+        display: none; /* Hide table headers on mobile */
+    }
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+    table tr {
+        margin-bottom: 10px;
+    }
+    /* table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    } */
+    table td:before {
+        /* Display the label for each cell (using the content attribute) */
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+/* General Footer Styling */
+.footer {
+    background-color: #282828; /* Dark background for contrast */
+    color: #fff;               /* White text for visibility */
+    padding: 30px 20px;        /*Space around the text */
+    /* text-align: center;        Centering content */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    border-top: 2px solid #FF7F00; /* Stylish top border */
+}
+
+/* Footer Content Styling */
+.footer-content {
+    max-width: 1000px;
+    margin: 0 2px; /* Center the footer content */
+}
+
+/* Footer Text Styling */
+.footer-text {
+    margin: 10px 0;  /* Add spacing between each paragraph */
+    font-size: 14px;  /* Adjust font size for readability */
+}
+
+/* Footer Link Styling */
+.footer-link {
+    color: #FF7F00; /* Bright orange for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;     /* Make links stand out */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.footer-link:hover {
+    color: #fff;  /* Change to white when hovered */
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Contact Info Styling */
+.contact-info {
+    text-align: left; /* Align content to the left */
+    margin-top: 20px; /* Add some space above the contact section */
+    font-size: 14px;  /* Make the text consistent with other footer text */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Styling for strong tags within contact info */
+.contact-info strong {
+    color: #FF7F00; /* Highlight labels in orange */
+}
+
+/* General Footer Styling */
+.footer-area {
+    background-color: #212121;
+    color: #fff;
+    /* padding-top: 60px; */
+    padding-bottom: 40px;
+}
+
+.footer-content-wrapper {
+    padding-top: 30px;
+}
+
+/* Footer Columns Layout */
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 30px;
+}
+
+.footer-logo img {
+    max-width: 180px;
+    margin-bottom: 15px;
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.footer-desc strong {
+    color: #fff;
+}
+
+.footer-desc a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.footer-desc a:hover {
+    text-decoration: underline;
+}
+
+/* Social Links */
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-links a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #4CAF50;
+}
+
+/* Footer Widget Section */
+.footer-widget {
+    margin-bottom: 30px;
+}
+
+.footer-widget__title {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+/* Footer Navigation Links */
+.footer-widget__navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-widget__navigation li {
+    margin-bottom: 10px;
+}
+
+.footer-widget__navigation a {
+    font-size: 14px;
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.footer-widget__navigation a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-copyright-wrapper {
+    margin-top: 40px;
+    border-top: 1px solid #4CAF50;
+    padding-top: 20px;
+}
+
+.footer-copyright-left {
+    font-size: 14px;
+}
+
+.footer-copyright-right {
+    text-align: right;
+}
+
+.footer-copyright-right__navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-copyright-right__navigation li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-copyright-right__navigation a {
+    font-size: 14px;
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.footer-copyright-right__navigation a:hover {
+    color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 991px) {
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-columns {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+
+    .footer-widget__title {
+        font-size: 15px;
+    }
+
+    .footer-widget__navigation a {
+        font-size: 12px;
+    }
+
+    .social-links a {
+        font-size: 18px;
+    }
+}
+.subbrand-image {
+    text-align: center; /* Centers the content inside the container */
+    margin-bottom: 20px; /* Adds space below the container */
+}
+
+.subbrand-image img {
+    display: block;  /* Makes the image a block element */
+    margin: 0 auto;  /* Horizontally centers the image */
+    max-width: 70%;
+    padding: 10px; 
+    border: 5px solid orange
+    ; /* Ensures the image is responsive */
+    height: auto;  /* Maintains aspect ratio */
+}
+
+.subbrand-image h2 {
+    margin-top: 10px;  /* Adds some space between the image and text */
+    font-size: 24px;  /* You can adjust the font size as needed */
+    color: #ff6600;  /* Sets the color of the text (you can change this) */
+    font-weight: bold;
+}
+
+        /* General Styling for the About Section */
+        .about {
+            max-width: 1100px;
+            margin: 0 auto;
+            /* padding: 40px 20px; */
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Section Header */
+        .about header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about .section-title {
+            font-size: 32px;
+            color: #4a4a4a;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Subheading */
+        .about .subheading {
+            font-size: 24px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* General Paragraph Styling */
+        .paragraph {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .paragraph strong {
+            color: #222;
+            font-weight: 600;
+        }
+
+        /* Warranty Section */
+        .about .para {
+            margin-bottom: 30px;
+            padding: 10px;
+            background-color: #fff;
+            border-left: 4px solid #ff9800;
+            border-radius: 8px;
+        }
+
+        .about .para h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Call to Action Section */
+        .about .call-to-action {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 4px solid #4CAF50;
+            border-radius: 8px;
+        }
+
+        .about .call-to-action h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .about .call-to-action p {
+            font-size: 16px;
+            color: #777;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about .call-to-action a {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .about .call-to-action a:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about {
+                padding: 30px 15px;
+            }
+
+            .about .section-title {
+                font-size: 28px;
+            }
+
+            .about .subheading {
+                font-size: 20px;
+            }
+
+            .paragraph {
+                font-size: 15px;
+            }
+
+            .about .para, .about .call-to-action {
+                padding: 15px;
+            }
+
+            .about .call-to-action a {
+                padding: 10px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about {
+                padding: 20px 10px;
+            }
+
+            .about .section-title {
+                font-size: 24px;
+            }
+
+            .about .subheading {
+                font-size: 18px;
+            }
+
+            .paragraph {
+                font-size: 14px;
+            }
+
+            .about .para, .about .call-to-action {
+                padding: 10px;
+            }}
