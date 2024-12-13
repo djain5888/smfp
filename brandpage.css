@@ -777,8 +777,8 @@ tr:hover {
                 }
             
                 .feature-card {
-                    min-width: 250px;
-                    max-width: 250px;  /* Set a min-width for the cards in the slider */
+                    min-width: 300px;
+                    max-width: 300px;  /* Set a min-width for the cards in the slider */
                     flex-shrink: 0;  /* Prevent cards from shrinking */
                 }
             }
