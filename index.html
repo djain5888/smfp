@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEL TIGER FLAT PRODUCTS LTD</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Swiper CSS -->
+
+
 
     <!-- FontAwesome CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -19,11 +22,11 @@
                 <img src="master.jpeg" alt="Master Brand Logo" class="logo">
             </div>
             <h1>SEL TIGER FLAT PRODUCTS LTD</h1>
-            <section class="stock-price-section">
+            <!-- <section class="stock-price-section">
                 <h2>Live Stock Price</h2>
                 <p>Stock Symbol: <strong>SHYAM METALICS</strong></p>
                 <p>Current Price: <span id="stock-price">Loading...</span></p>
-            </section>
+            </section> -->
         </div>
     </header>
 
@@ -97,6 +100,9 @@
         </div>
     </div>
 
+    
+
+  
     <!-- Download Section -->
     <section class="download-section">
         <a href="Flyer.pdf" download class="download-btn">
@@ -108,6 +114,37 @@
     
 
     <script>
+
+new Swiper('.card-wrapper', {  
+  loop: true,  
+  speed: 700,  
+  spaceBetween: 30,  
+
+  // If we need pagination  
+  pagination: {  
+    el: '.swiper-pagination',  
+    clickable: true,  
+    dynamicBullets: true,  
+  },  
+
+  // Navigation arrows  
+  navigation: {  
+    nextEl: '.swiper-button-next',  
+    prevEl: '.swiper-button-prev',  
+  },  
+  
+  breakpoints: { 
+    0: {  
+      slidesPerView: 1  
+    },  
+    768: {  
+      slidesPerView: 2  
+    },  
+    1024: {  
+      slidesPerView: 3  
+    },  
+  }  
+});  
         const apiKey = "58T5CIDBFFD2IKK9"; // Replace with your Alpha Vantage API key
         const symbol = "SHYAMMETL.BSE"; // Stock symbol you want to track
         const apiUrl = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=shyammetl.bse&apikey=58T5CIDBFFD2IKK9`;

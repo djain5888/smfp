@@ -689,3 +689,156 @@ ul li b {
     margin: 5px 0;
 }
  
+.slider-container {
+    width: 100%;           /* Full width */
+    max-width: 800px;      /* Maximum width for the container */
+    height: 400px;         /* Fixed height to define layout */
+    margin: 50px auto;     /* Center the slider horizontally */
+    overflow: hidden;      /* Hides images outside the visible area */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+
+  /* Slider */
+  .slider {
+    display: flex;                    /* Arrange slides in a row */
+    transition: transform 0.5s ease;  /* Smooth transition for sliding */
+    height: 100%;                     /* Match height of the container */
+  }
+
+  /* Each Slide */
+  .slide {
+    min-width: 100%; /* Each slide occupies full width of the container */
+    height: 100%;    /* Match height of the container */
+  }
+
+  .slide img {
+    width: 100%;     /* Image stretches to fill the slide */
+    height: 100%;    /* Ensure the image fits properly */
+    object-fit: cover; /* Maintains aspect ratio, crops if necessary */
+  }
+    .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+  .control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .card-wrapper {
+    max-width: 1100px;
+    margin: 0 auto; /* Centers the wrapper horizontally */
+    padding: 20px 10px;
+    overflow: hidden;
+    position: relative; /* To position the slide controls */
+  }
+  
+  .card-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    padding: 0;
+    margin: 0;
+    gap: 15px; /* Adds spacing between cards */
+  }
+  
+  .card-item {
+    list-style: none;
+    flex: 1 1 calc(33.33% - 15px); /* Each card takes up 33.33% of the row */
+    box-sizing: border-box; /* Ensures padding/border doesn't exceed width */
+  }
+  
+  .card-link {
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+    height: 100%;
+  }
+  
+  .card-link:hover {
+    border-color: #5372f0;
+  }
+  
+  .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    color: #000;
+    font-weight: 100;
+  }
+  
+  .card-button {
+    height: 35px;
+    width: 35px;
+    color: #5372f0;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    border: 2px solid #5382f0;
+    transition: 0.4s ease;
+  }
+  
+  .card-button:hover {
+    color: #fff;
+    background: #5372f0;
+  }
+  
+  .slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card-item {
+      flex: 1 1 calc(50% - 10px); /* Each card takes up 50% of the row */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .card-item {
+      flex: 1 1 100%; /* Each card takes up the full row */
+    }
+  }
+  
