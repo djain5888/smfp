@@ -101,23 +101,64 @@ h1:hover, h2:hover {
 /* About Us Section */
 .about-us {
     flex: 1;
-    max-width: 60%;
+    max-width: 70%;
     background-color: #f9f9f9;
     padding: 30px 20px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     font-size: 18px;
+    
+}
+.welcome {
+    flex: 1;
+    max-width: 60%;
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-size: 18px;    
+}
+.unique-features{
+    width: 100%;
+}
+.banner-area {
+    display: block;
+    background: #140c0c;
+    position: relative;
+    top: 38px;
+}
+.banner-area h1 {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    top: 45%;
+    position: absolute;
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+}
+.banner-area h1 span {
+    color: #ef8122;
+    font-size: 100px;
 }
 
+
+.welcome h2 {
+    font-size: 32px;
+    color: #f1730c;
+    margin-bottom: 1px;
+    align-self: center;
+    text-align: center;
+}
 .about-us h2 {
     font-size: 32px;
-    color: #2C3E50;
+    color: #f1730c;
     margin-bottom: 20px;
 }
 
 /* Poster Section */
 .poster {
-    flex: 0 0 35%;  /* Ensure the poster takes up 35% of the space */
+    flex: 0 0 30%;  /* Ensure the poster takes up 35% of the space */
     display: flex;
     justify-content: center;
     align-items: center;

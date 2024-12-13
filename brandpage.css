@@ -308,9 +308,10 @@ tr:hover {
 /* Grid Layout for Feature Cards */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* 3 cards per row, auto-adjusting */
+    grid-template-columns: repeat(3, 1fr);  /* 3 cards per row, auto-adjusting */
     gap: 20px;  /* Spacing between cards */
     margin-top: 20px;
+    width: 100%;
 }
 
 /* Styling for individual feature cards */
