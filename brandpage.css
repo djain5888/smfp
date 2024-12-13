@@ -312,6 +312,8 @@ tr:hover {
     gap: 20px;  /* Spacing between cards */
     margin-top: 20px;
     width: 100%;
+    grid-auto-flow: column;
+    overflow-x: auto; 
 }
 
 /* Styling for individual feature cards */
@@ -319,6 +321,8 @@ tr:hover {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
+    min-width: 250px;
+    /* max-width: 250px; */
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
@@ -764,3 +768,17 @@ tr:hover {
             .about .para, .about .call-to-action {
                 padding: 10px;
             }}
+
+            @media (max-width: 768px) {
+                .features-grid {
+                    display: flex;
+                    overflow-x: auto;  /* Horizontal scroll on small screens */
+                    gap: 10px;
+                }
+            
+                .feature-card {
+                    min-width: 250px;
+                    max-width: 250px;  /* Set a min-width for the cards in the slider */
+                    flex-shrink: 0;  /* Prevent cards from shrinking */
+                }
+            }
