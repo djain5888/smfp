@@ -12,6 +12,7 @@ html, body {
     color: #f1730c;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
     
     /* justify-content: space-between;  Ensures content takes up space between header and footer */
     /* text-align: center; */

@@ -166,6 +166,57 @@
             
             // Initialize the slider
             showSlides(slideIndex);
+
+
+            const sliderContainer = document.querySelector(".slider-container");
+
+sliderContainer.addEventListener("mousedown", (e) => {
+  startX = e.clientX;
+});
+
+sliderContainer.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+sliderContainer.addEventListener("mousemove", (e) => {
+  if (startX !== 0) {
+    endX = e.clientX;
+  }
+});
+
+sliderContainer.addEventListener("touchmove", (e) => {
+  if (startX !== 0) {
+    endX = e.touches[0].clientX;
+  }
+});
+
+sliderContainer.addEventListener("mouseup", () => {
+  handleSwipe();
+});
+
+sliderContainer.addEventListener("touchend", () => {
+  handleSwipe();
+});
+
+// Function to handle swipe detection
+function handleSwipe() 
+{
+  if (startX !== 0 && endX !== 0) {
+    const diff = endX - startX;
+
+    if (Math.abs(diff) > 50) { // Adjust the threshold for swipe sensitivity
+      if (diff > 0) {
+        plusSlides(-1); // Swipe Right -> Previous Slide
+      } else {
+        plusSlides(1); // Swipe Left -> Next Slide
+      }
+    }
+  }
+}
+
+  // Reset values
+  startX = 0;
+  endX = 0;
             </script>
         <div class="content-wrapper">
             <section class="about-us">
