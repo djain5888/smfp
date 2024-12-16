@@ -31,6 +31,10 @@
     </header>
 
 </div>
+
+
+
+
     <!-- <div class="poster">
         <img src="images/Mastervisual.jpeg" alt="Master Brand Poster">
     </div>
@@ -39,13 +43,138 @@
 
     <!-- Main Content Section -->
     <section class="main-content">
+        <div class="slider-container">
+            <div class="slide fade">
+              <img class="slide-image" src="images/banner.jpg">
+              <div class="slide-content">
+                <h1 class="slide-title" style="color: #f1730c;">SEL TIGER </h1>
+                <p class="slide-desc">
+                    UNVEILING A NEW STANDARD IN FLAT PRODUCTS
+                </p>
+                <!-- <a href="" class="slide-btn">
+                  button <ion-icon name="arrow-forward-circle"></ion-icon>
+                </a> -->
+              </div>
+              <!-- <div class="slide-number-container">
+                <p class="slider-number">01</p>
+                <hr>
+                <p class="slider-number">03</p>
+              </div> -->
+            </div>
+          
+            <div class="slide fade">
+              <img class="slide-image" src="images/Bg1.png">
+              <div class="slide-content">
+                <h1 class="slide-title" style="color: #f1730c;">UNMATCHED VALUE PROPOSITION  </h1>
+                <p class="slide-desc">
+                  UNIQUE WARRANTY || TAILORED SOLUTION || QUICKER DELIVERY || CONSISTENT EXCELLENCE
+                </p>
+                <!-- <a href="" class="slide-btn">
+                  button <ion-icon name="arrow-forward-circle"></ion-icon>
+                </a> -->
+              </div>
+              <!-- <div class="slide-number-container">
+                <p class="slider-number">02</p>
+                <hr>
+                <p class="slider-number">03</p>
+              </div> -->
+            </div>
+          
+            <div class="slide fade">
+              <img class="slide-image" src="images/Roaylefl.jpg">
+              <div class="slide-content">
+                <h1 class="slide-title">VALUES</h1>
+                <p class="slide-desc">INTEGRITY || OWNERSHIP || COLLABORATION || COMMITMENT ||
+                </p>
+                <!-- <a href="" class="slide-btn">
+                  button <ion-icon name="arrow-forward-circle"></ion-icon>
+                </a> -->
+              </div>
+              <!-- <div class="slide-number-container">
+                <p class="slider-number">03</p>
+                <hr>
+                <p class="slider-number">03</p>
+              </div> -->
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <div class="slider-nav">
+              <a class="slider-nav-btn" onclick="plusSlides(-1)">
+                <ion-icon name="caret-back-outline"></ion-icon>
+              </a>
+              <a class="slider-nav-btn" onclick="plusSlides(1)">
+                <ion-icon name="caret-forward-outline"></ion-icon>
+              </a>
+            </div>
+          
+            <!-- The dots/circles -->
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+          
+          <script>
+          let slideIndex = 1;
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName("dot");
+            
+            // Function to show a specific slide
+
+            function showSlides(n) {
+              if (n > slides.length) {
+                slideIndex = 1;
+              }
+              if (n < 1) {
+                slideIndex = slides.length;
+              }
+
+              // Hide all slides
+              for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+            console.log("value before displat ",n)
+              // Remove the "active" class from all dots
+              for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+            
+              // Display the current slide and mark its corresponding dot as active
+              slides[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " active";
+              console.log("valueafter display",n)
+
+            }
+            
+            // Function to advance to the next slide
+            function plusSlides(n) {
+              showSlides((slideIndex += n));
+            }
+            
+            // Function to navigate to a specific slide
+            function currentSlide(n) {
+              showSlides((slideIndex = n));
+            }
+            
+            // Automatically advance to the next slide every 3 seconds (3000 milliseconds)
+            setInterval(function () {
+              plusSlides(1);
+            }, 8000);
+            
+            // Initialize the slider
+            showSlides(slideIndex);
+            </script>
         <div class="content-wrapper">
             <section class="about-us">
                 <!-- <h2>About Us</h2>
                 -->
                 <h2 >Welcome to Shyam Metalics</h2>
                 <p>As one of India's leading fully integrated steel producers, Shyam Metalics symbolizing unmatched strength, precision, and resilience. With an installed capacity of <strong>13.50 MTPA</strong> spread across <strong>seven advanced plants</strong>, we dominate the steel industry from ore to metal, ensuring premium quality and cost efficiency at every step of production.</p>
-                    <h2>Integrated Excellence</h2>
+                <hr>
+                <h2>Integrated Excellence</h2>
                 <p>At the core of our operations are our fully integrated manufacturing plants, advanced production systems, and captive power plants. This seamless integration enables us to adapt swiftly to market demands while maintaining consistent excellence. Just like a tiger, we move with strategic precision and unstoppable power, setting new benchmarks in the steel industry.</p>
            
                
@@ -148,15 +277,15 @@
             </a>
         </div>
         <div class="brand">
-            <a href="subbrand1.html" class="link-container">
+            <a href="Royale.html" class="link-container">
                 <div class="image-box">
-                    <img src="Royale.png" alt="Sub Brand 1">
+                    <img src="Royale.png" alt="Royale">
                 </div>
                 <h3 class="modern-link">Ultra Premium Color Coated Sheet</h3>
             </a>
         </div>
         <div class="brand">
-            <a href="subbrand2.html" class="link-container">
+            <a href="Elite.html" class="link-container">
                 <div class="image-box">
                     <img src="Elite.png" alt="Sub Brand 2">
                 </div>
@@ -164,7 +293,7 @@
             </a>
         </div>
         <div class="brand">
-            <a href="subbrand3.html" class="link-container">
+            <a href="WiderCoils.html" class="link-container">
                 <div class="image-box">
                     <img src="Azure.png" alt="Sub Brand 3">
                 </div>
@@ -172,7 +301,7 @@
             </a>
         </div>
         <div class="brand">
-            <a href="subbrand4.html" class="link-container">
+            <a href="NarrowCorrugated.html" class="link-container">
                 <div class="image-box">
                     <img src="Alfa.png" alt="Sub Brand 4">
                 </div>
@@ -182,7 +311,9 @@
     </div>
 
     
-
+    
+</body>
+</html>
   
     <!-- Download Section -->
     <section class="download-section">
@@ -194,62 +325,7 @@
     <!-- Stock Price Section -->
     
 
-    <script>
-
-new Swiper('.card-wrapper', {  
-  loop: true,  
-  speed: 700,  
-  spaceBetween: 30,  
-
-  // If we need pagination  
-  pagination: {  
-    el: '.swiper-pagination',  
-    clickable: true,  
-    dynamicBullets: true,  
-  },  
-
-  // Navigation arrows  
-  navigation: {  
-    nextEl: '.swiper-button-next',  
-    prevEl: '.swiper-button-prev',  
-  },  
-  
-  breakpoints: { 
-    0: {  
-      slidesPerView: 1  
-    },  
-    768: {  
-      slidesPerView: 2  
-    },  
-    1024: {  
-      slidesPerView: 3  
-    },  
-  }  
-});  
-        const apiKey = "58T5CIDBFFD2IKK9"; // Replace with your Alpha Vantage API key
-        const symbol = "SHYAMMETL.BSE"; // Stock symbol you want to track
-        const apiUrl = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=shyammetl.bse&apikey=58T5CIDBFFD2IKK9`;
-
-        async function fetchStockPrice() {
-            try {
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-
-                if (data["Global Quote"] && data["Global Quote"]["05. price"]) {
-                    const price = data["Global Quote"]["05. price"];
-                    document.getElementById("stock-price").textContent = `Rs.${parseFloat(price).toFixed(2)}`;
-                } else {
-                    document.getElementById("stock-price").textContent = "Data not available.";
-                }
-            } catch (error) {
-                console.error("Error fetching stock price:", error);
-                document.getElementById("stock-price").textContent = "Error loading data.";
-            }
-        }
-
-        fetchStockPrice(); // Fetch initially
-        setInterval(fetchStockPrice, 3600000); // Update every hour (3600000 ms)
-    </script>
+    
 </body>
 </html>
 
